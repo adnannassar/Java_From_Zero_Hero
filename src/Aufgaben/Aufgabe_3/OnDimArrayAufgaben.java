@@ -140,6 +140,17 @@ public class OnDimArrayAufgaben {
                 System.out.println(words[i] + " is not Capitalized");
             }
         }
+        int start = 15;
+        int array2[] = new int[100];
+        for (int i = 0; i < 100; i++) {
+            array2[i] = i + 15;
+        }
+        int summe = 0 ;
+        for (int i = 0; i < array2.length; i++) {
+            summe += array2[i];
+        }
+
+        System.out.println("summe: " + summe);
     }
 
 
