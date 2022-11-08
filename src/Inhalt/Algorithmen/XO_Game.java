@@ -35,7 +35,6 @@ public class XO_Game {
     public static void main(String[] args) {
         readNames();
         gameStart();
-
     }
 
     public static void playerOneTurn() {
@@ -95,7 +94,7 @@ public class XO_Game {
     public static String determinateWinner() {
         // TODO
         return "No Body!";
-    }
+    }   
 
     public static boolean gameFiledIsFull() {
         for (int i = 0; i < gameFiled.length; i++) {
