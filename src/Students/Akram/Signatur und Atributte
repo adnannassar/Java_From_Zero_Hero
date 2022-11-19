@@ -1,0 +1,29 @@
+hoppla(a,a,b); //Aufruf 1  -> zulässig -> gibt lld aus
+hoppla(b,b,b); //Aufruf 2  -> unzulässig
+hoppla(b,a,b); //Aufruf 3  -> zulässig -> gibt dld aus
+hoppla(b,a,a); //Aufruf 4  -> unzulässig
+
+----------------------------------------------------------------------
+
+    static int a1;
+    int a2;
+
+    void test(){
+        boolean a2;
+        static double a3; //static kann nur für die Klasse definiert werden
+        double a4;
+        a2= true;
+        {
+            double a4; //ist schon oben definiert
+            double a5;
+
+            a5= 39.0;
+            a1= a1 +1;
+
+        }
+        a5=1.23; //Muss im selben Scope definiert werden
+    }
+    void test2(){
+        boolean b2;
+        a4 = 17.5; //Typ fällt
+    }
