@@ -33,9 +33,15 @@ public class Bruch {
     public Bruch addieren(Bruch b){
         Bruch meinBruch = new Bruch();
 
+        if(b.nenner == this.nenner){
+            meinBruch.zaehler= this.zaehler + b.zaehler;
+            meinBruch.nenner = b.nenner;
+            return meinBruch;
+        }
             meinBruch.zaehler = (this.zaehler * b.nenner) + (this.nenner * b.zaehler);
             meinBruch.nenner = (this.nenner * b.nenner);
             return meinBruch;
+
     }
     public Bruch multiplizieren(Bruch b){
         Bruch meinBruch = new Bruch();
