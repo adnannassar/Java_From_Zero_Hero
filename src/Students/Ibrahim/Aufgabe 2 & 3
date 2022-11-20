@@ -1,0 +1,61 @@
+//
+//// Aufgabe 2
+//public class Signatur {
+//    public static void hoppla(long x, long y, double z) {
+//        System.out.println("lld");
+//    }
+//
+//    public static void hoppla(long x, long y, long z) {
+//        System.out.println("111");
+//    }
+//
+//    public static void hoppla(double x, long y, double z) {
+//        System.out.println("dld");
+//    }
+//
+//    public static void main(String[]args) {
+//        long a = 333;
+//        double b = 4.44;
+//        hoppla(a, a, b); // Aufruf 1
+//        //hoppla(b, b, b); // Aufruf 2 (double, double, double) solche Methode ist nicht definiert
+//        hoppla(b, a, b); //Aufruf 3
+//        hoppla (b,a, a); // Aufruf 4 (double, long, long) => aber sollte (double, long, double)
+//        // aber long umfasst double, deshalb funktioniert
+//    }
+//}
+//
+//
+//
+//
+// Aufgabe 3
+//class Attribute
+//{
+//    static int attribut1;
+//    boolean attribut2;
+//
+//    void test () {
+//        boolean attribut2;
+//        static double attribute3; // => Bei Definition einer Variable ist static nicht erlaubt
+//        double attribut4;
+//
+//        attribut2 = true;
+//        {
+//            double attribut4; // => Denn ist es schon in der Zeile 10 definiert
+//            double attribut5;
+//
+//            attribut5 = 39.5;
+//            attribut1 = attribut1 + 1;
+//        }
+//        attribut5 = 1.23; // => Diese Variable ist in dem Scope von der Zeile 13 bis 19 definiert,
+//        // deshalb kann die einen neuen Wert nur innerhalb dieses Scope zuweisen.
+//    }
+//
+//    void test2(boolean attribut2){
+//        boolean attribut2; // => Denn ist es schon in der Konstrukteur definiert, kann hier direkt
+//        // einen Wert für die Variable eingeben, als initialisieren, aber nicht definieren
+//        attribut4 = 17.5; // => Denn ist es in einem anderen lokalen Scope definiert
+//    }
+//}
+//
+//
+//
