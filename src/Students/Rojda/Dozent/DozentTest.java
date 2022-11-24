@@ -1,4 +1,6 @@
-package Students.Rojda;
+package Students.Rojda.Dozent;
+
+import Students.Rojda.Dozent.Dozent;
 
 public class DozentTest {
     public static void main (String[]args){

@@ -1,4 +1,4 @@
-package Students.Rojda;
+package Students.Rojda.Dozent;
 
 public class Dozent {
     private String name;
