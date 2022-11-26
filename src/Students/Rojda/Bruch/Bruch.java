@@ -1,5 +1,5 @@
 package Students.Rojda.Bruch;
-//مو مخلصة لسى |:
+// ENDLICH :)
 public class Bruch {
     private int zähler;
     private int nenner;
@@ -23,29 +23,33 @@ public class Bruch {
 
 
     public Bruch kehrwert() {
-        Bruch b = new Bruch(zähler , nenner);
-        b.nenner = zähler;
-        b.zähler = nenner;
+        Bruch b = new Bruch(this.zähler , this.nenner);
+        b.nenner = this.zähler;
+        b.zähler = this.nenner;
         return b;
     }
 
     public Bruch addieren(Bruch b) {
         Bruch addErg = new Bruch();
-        if(nenner != nenner){
-            nenner = nenner1 * nenner2;
-            zähler = (zähler1 * nenner2) +(zähler2 * nenner1);
+        if(this.nenner != b.nenner){
+           int z = b.nenner * this.nenner;
+           int x = (this.zähler * b.nenner);
+           int y = (b.zähler * this.nenner);
+           addErg.nenner = z;
+           addErg.zähler = x + y ;
         }
         else{
-            addErg.zähler = zähler1 + zähler2;
-            addErg.nenner = nenner1;
+            int N = this.zähler + b.zähler;
+            addErg.zähler = N;
+            addErg.nenner = this.nenner;
         }
         return addErg;
     }
 
     public Bruch multiplizieren(Bruch b) {
        Bruch multErg = new Bruch();
-       multErg.zähler= zähler1 * zähler2;
-       multErg.nenner = nenner1 * nenner2;
+       multErg.zähler= b.zähler * this.zähler;
+       multErg.nenner = b.nenner * this.nenner;
 
         return multErg;
     }
