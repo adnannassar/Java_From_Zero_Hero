@@ -1,5 +1,6 @@
-public class DozentTest {
+package Students.Jian;
 
+public class DozentTest {
 
     public static void main(String[] args) {
 
