@@ -1,4 +1,4 @@
-package Vererbung;
+package Vererbung_und_Abstrakte_klassen;
 
 public abstract class Form {
     private Punkt position;

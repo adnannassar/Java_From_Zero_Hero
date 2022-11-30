@@ -1,4 +1,4 @@
-package Vererbung;
+package Vererbung_und_Abstrakte_klassen;
 
 public class Rechteck extends Form {
     private int länge, breite;

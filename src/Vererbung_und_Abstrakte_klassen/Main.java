@@ -1,6 +1,4 @@
-package Vererbung;
-
-import Aufgaben.Aufgabe_1.For;
+package Vererbung_und_Abstrakte_klassen;
 
 public class Main {
     public static void main(String[] args) {

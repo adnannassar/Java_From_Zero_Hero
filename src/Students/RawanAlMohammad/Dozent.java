@@ -1,5 +1,6 @@
 package Students.RawanAlMohammad;
 
+
 public class Dozent {
     private String name;
     private String lehrgebiet;
@@ -29,15 +30,19 @@ public class Dozent {
     }
 
     public String getName() {
+
         return name;
     }
     public String getLehrgebiet(){
+
         return lehrgebiet;
     }
     public boolean isDekan(){
+
         return dekan;
     }
     public char getGeschlecht(){
+
         return geschlecht;
     }
 }
