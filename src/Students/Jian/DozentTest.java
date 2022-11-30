@@ -1,4 +1,4 @@
-package Students.Jian.Dozent;
+package Students.Jian;
 
 public class DozentTest {
 
