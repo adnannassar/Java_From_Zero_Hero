@@ -1,0 +1,6 @@
+Folgende Themen müssen beherrscht werden um an den Advanced Kurs teilnehmen zu können:
+1. datentypen
+2. if , else for , while
+3. Methods, Prozedur, Funktion
+4. array 1d , array 2d, String,  Wrapper klassen
+5. Klassen, objekten, Vererbung, Interface, Polymorphie

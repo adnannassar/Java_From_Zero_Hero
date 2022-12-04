@@ -1,7 +1,5 @@
 package Students.Akram.Vererbung.Mannschaften;
 
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
         Spieler goetze = new Spieler("Mario","Götze","Mittelfeld",5);

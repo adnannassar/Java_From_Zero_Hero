@@ -43,4 +43,13 @@ public class Dozent {
         return geschlecht;
     }
 
+    @Override
+    public String toString() {
+        return "Dozent{" +
+                "name='" + name + '\'' +
+                ", lehrgebiet='" + lehrgebiet + '\'' +
+                ", dekan=" + dekan +
+                ", geschlecht=" + geschlecht +
+                '}';
+    }
 }
