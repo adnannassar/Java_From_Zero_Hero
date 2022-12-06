@@ -1,6 +1,6 @@
 package Students.Jian.MitarbeiterVererbung;
 
-public class Arbeiter extends Mitarbeiter {
+public class Arbeiter extends Mitarbeiter implements Mensch {
     private double stundenlohn;
     private double anzahlStunden;
     private double ueberstundenzuschlag;
@@ -19,5 +19,15 @@ public class Arbeiter extends Mitarbeiter {
     @Override
     public double berechneGehalt(){
         return 0;
+    }
+
+    @Override
+    public int age() {
+        return 30;
+    }
+
+    @Override
+    public double height() {
+        return 180;
     }
 }

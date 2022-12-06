@@ -1,7 +1,5 @@
 package Students.Rojda.Dozent;
 
-import Students.Rojda.Dozent.Dozent;
-
 public class DozentTest {
     public static void main (String[]args){
         Dozent dieDozentin = new Dozent("Rawan AlMohammad", "Mathe & Informatik",'F');

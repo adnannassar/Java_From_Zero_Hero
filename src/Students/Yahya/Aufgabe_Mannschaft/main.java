@@ -1,6 +1,6 @@
 package Students.Yahya.Aufgabe_Mannschaft;
 
-public class main {
+public class  main {
     public static void main(String[] args) {
         Spieler spieler1 = new Spieler("Götze" , "Mario" , "CM" , 5);
         Spieler spieler2 = new Spieler("Aubameyang" , "Pierre-Emerik" , "CF" , 18);
