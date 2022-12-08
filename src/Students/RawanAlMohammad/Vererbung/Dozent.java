@@ -1,4 +1,4 @@
-package Students.RawanAlMohammad;
+package Students.RawanAlMohammad.Vererbung;
 
 
 public class Dozent {

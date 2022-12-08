@@ -1,4 +1,6 @@
-package Students.RawanAlMohammad;
+package Students.RawanAlMohammad.Vererbung;
+
+import Students.RawanAlMohammad.Vererbung.Dozent;
 
 public class DozentTest {
     public static void main(String[] args) {
