@@ -49,17 +49,14 @@ public class Mannschaft {
 
     public void printMitgliederInfos() {
         System.out.println("Mannschaft: " + name + "\n");
-        System.out.printf("%-10s%-10s%-20s%-20s%-20s%-20s\n" , "ID", "Type", "Name", "Vorname", "Jahresgehalt",
-                            "Spezifische Eigenschaften");
+        System.out.printf("%-10s%-10s%-20s%-20s%-20s%-20s\n", "ID", "Type", "Name", "Vorname", "Jahresgehalt", "Spezifische Eigenschaften");
         for (int i = 0; i <= 122; i++) {
             System.out.print("-");
         }
         System.out.println();
         for (Mitglied mitglied : mitglieder) {
             if (mitglied != null) {
-                System.out.printf("%-10d%-10s%-20s%-20s%-20.2f%s\n", mitglied.getId(),
-                        mitglied.getType(mitglied), mitglied.getName(), mitglied.getVorname(),
-                        mitglied.berechneJahresGehlat(), mitglied.getSonstiges());
+                System.out.printf("%-10d%-10s%-20s%-20s%-20.2f%s\n", mitglied.getId(), mitglied.getType(mitglied), mitglied.getName(), mitglied.getVorname(), mitglied.berechneJahresGehlat(), mitglied.getSonstiges());
             }
         }
         System.out.printf("\n%-60s%f\n\n", "Summe der Jaresgehälter:", summeAlleGehälter());
@@ -71,11 +68,11 @@ public class Mannschaft {
             printMitgliederInfos();
             System.out.print("""
                     Weitere Aktionen:
-                     (A)rzt hinzufügen
-                     (S)pieler hizufügen
-                     (T)rainer hinzufügen
-                     (B)eenden
-                    Ihre Eingabe:\s""");
+                      (A)rzt hinzufügen
+                      (S)pieler hizufügen
+                      (T)rainer hinzufügen
+                      (B)eenden
+                     Ihre Eingabe:\s""");
             option = sc.next().charAt(0);
             switch (option) {
                 case 'A' -> addArzt();
@@ -127,6 +124,7 @@ public class Mannschaft {
         }
         return null;
     }
+
     public void addTrainer() {
         System.out.println("Add Trainer");
         System.out.print("Name des Trainer: ");
@@ -147,7 +145,6 @@ public class Mannschaft {
             case "N" -> addMitglied(trainer);
         }
     }
-
 
 
 }

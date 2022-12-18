@@ -54,18 +54,15 @@ public class OneDimArray {
     }
 
     // 17
-    public static boolean isPrime(int number) {
-        int numberOfDividers = 0;
-        for (int i = 2; i <= number; i++) {
-            if (number % i == 0) {
-                numberOfDividers++;
-            }
-        }
-        if (numberOfDividers <= 2) {
-            return true;
-        } else {
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
             return false;
         }
+        for (int i = 2; i <= num / 2; i++) {
+            if ((num % i) == 0)
+                return false;
+        }
+        return true;
     }
 
 }
