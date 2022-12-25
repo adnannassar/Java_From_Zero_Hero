@@ -1,7 +1,7 @@
 package Advanced.MedienVerwaltung;
 
 
-class Audio extends Medium {
+public class Audio extends Medium {
     private String interpret;
     private int dauer;
 

@@ -1,4 +1,7 @@
-package Advanced.MedienVerwaltung;
+package Advanced.MedienVerwaltung.Alt;
+
+import Advanced.MedienVerwaltung.Audio;
+import Advanced.MedienVerwaltung.Bild;
 
 public class MainArray {
     public static void main(String[] args) {

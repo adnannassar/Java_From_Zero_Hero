@@ -1,4 +1,6 @@
-package Advanced.MedienVerwaltung;
+package Advanced.MedienVerwaltung.Alt;
+
+import Advanced.MedienVerwaltung.Medium;
 
 public class MedienVerwaltungArray {
     private Medium[] medien;

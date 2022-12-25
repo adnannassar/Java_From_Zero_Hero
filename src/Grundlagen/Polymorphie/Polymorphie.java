@@ -13,10 +13,10 @@ public class Polymorphie {
         Collections.shuffle(list);
 
 
-        System.out.println("Time for linked List: " + checkContainsTime(new LinkedList<>(list)));
-        System.out.println("Time for array List: " + checkContainsTime(list));
-        System.out.println("Time for hashset List: " + checkContainsTime(new LinkedHashSet<>(list)));
-        System.out.println("Time for tree List: " + checkContainsTime(new TreeSet<>(list)));
+        System.out.println("Time for linked ListClass: " + checkContainsTime(new LinkedList<>(list)));
+        System.out.println("Time for array ListClass: " + checkContainsTime(list));
+        System.out.println("Time for hashset ListClass: " + checkContainsTime(new LinkedHashSet<>(list)));
+        System.out.println("Time for tree ListClass: " + checkContainsTime(new TreeSet<>(list)));
     }
 
     public static long checkContainsTime(Collection<Integer> list) {

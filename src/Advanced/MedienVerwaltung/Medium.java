@@ -2,6 +2,7 @@ package Advanced.MedienVerwaltung;
 
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public abstract class Medium {
     private int id;
@@ -44,5 +45,27 @@ public abstract class Medium {
 
     public void setJahr(int jahr) {
         this.jahr = jahr;
+    }
+
+
+    //    bild1.equals(bild2)
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Medium m)) {
+            return false;
+        }
+        if (this.jahr == m.jahr && this.title.equals(m.title)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, jahr);
     }
 }
