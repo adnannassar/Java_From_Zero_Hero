@@ -29,6 +29,6 @@ public class Bild extends Medium{
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), ort);
+        return Objects.hash(super.hashCode());
     }
 }

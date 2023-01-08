@@ -1,4 +1,8 @@
-package Advanced.MedienVerwaltung;
+package Advanced.Inhalt.Collections;
+
+import Advanced.MedienVerwaltung.Audio;
+import Advanced.MedienVerwaltung.Bild;
+import Advanced.MedienVerwaltung.Medium;
 
 import java.util.HashSet;
 

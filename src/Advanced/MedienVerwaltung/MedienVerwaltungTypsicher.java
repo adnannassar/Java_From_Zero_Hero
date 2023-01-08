@@ -1,5 +1,7 @@
 package Advanced.MedienVerwaltung;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -9,18 +11,36 @@ public class MedienVerwaltungTypsicher {
     public MedienVerwaltungTypsicher() {
         this.medien = new LinkedList<>();
     }
+
     public void aufnehmen(Medium m) {
         medien.add(m);
+
     }
 
     public void zeigeMedium() {
-        // sort
+        // ErscheinungJahrComparator eJc = new ErscheinungJahrComparator();
+        /* medien.sort(new Comparator<Medium>() {
+            @Override
+            public int compare(Medium o1, Medium o2) {
+                return o1.getJahr() - o2.getJahr();
+            }
+        });
+        */
+        /*
+        Collections.sort(medien, new Comparator<Medium>() {
+            @Override
+            public int compare(Medium o1, Medium o2) {
+                return o1.getJahr() - o2.getJahr();
+            }
+        });
+         */
+
+        Collections.sort(medien);
         Iterator<Medium> it = medien.iterator();
         while (it.hasNext()) {
             it.next().druckeDaten();
         }
     }
-
 
     public void sucheNeuesMedium() {
         if (!medien.isEmpty()) {

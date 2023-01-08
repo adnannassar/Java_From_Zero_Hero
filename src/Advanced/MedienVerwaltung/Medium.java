@@ -4,7 +4,7 @@ package Advanced.MedienVerwaltung;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public abstract class Medium {
+public abstract class Medium implements Comparable<Medium> {
     private int id;
     private String title;
     private int jahr;
@@ -67,5 +67,10 @@ public abstract class Medium {
     @Override
     public int hashCode() {
         return Objects.hash(title, jahr);
+    }
+
+    @Override
+    public int compareTo(Medium m){
+        return this.jahr - m.jahr;
     }
 }
