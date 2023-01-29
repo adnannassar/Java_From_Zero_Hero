@@ -1,9 +1,13 @@
 package Advanced.MedienVerwaltung;
 
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Bild extends Medium{
+public class Bild extends Medium implements Serializable {
     private String ort;
+    private static final long serialVersionUID = 3L;
 
     public Bild(String title, int jahr, String ort) {
         super(title, jahr);
@@ -17,6 +21,14 @@ public class Bild extends Medium{
     @Override
     public void druckeDaten() {
         System.out.println("ID = " + getId() + " \""+ getTitle()+ "\" aufgenommen im Jahr "+ getJahr()+" in "+ort);
+    }
+
+
+    @Override
+    public void druckeDaten(OutputStream stream) {
+        PrintWriter printWriter = new PrintWriter(stream);
+        printWriter.printf("ID = %d \"%s\" aufgenommen im Jahr %d in %s\n", getId(),getTitle(),getJahr(), ort);
+        printWriter.flush();
     }
 
     @Override

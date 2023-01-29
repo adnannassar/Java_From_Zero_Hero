@@ -1,9 +1,7 @@
 package Advanced.MedienVerwaltung;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.io.*;
+import java.util.*;
 
 public class MedienVerwaltungTypsicher {
     private LinkedList<Medium> medien;
@@ -17,7 +15,7 @@ public class MedienVerwaltungTypsicher {
 
     }
 
-    public void zeigeMedium() {
+    public void zeigeMedium(OutputStream stream) {
         // ErscheinungJahrComparator eJc = new ErscheinungJahrComparator();
         /* medien.sort(new Comparator<Medium>() {
             @Override
@@ -34,12 +32,16 @@ public class MedienVerwaltungTypsicher {
             }
         });
          */
-
-        Collections.sort(medien);
-        Iterator<Medium> it = medien.iterator();
-        while (it.hasNext()) {
-            it.next().druckeDaten();
+        if (!medien.isEmpty()) {
+            Collections.sort(medien);
+            Iterator<Medium> it = medien.iterator();
+            while (it.hasNext()) {
+                it.next().druckeDaten(stream);
+            }
+        } else {
+            System.out.println("Medien Liste ist leer!!");
         }
+
     }
 
     public void sucheNeuesMedium() {
@@ -62,5 +64,26 @@ public class MedienVerwaltungTypsicher {
             summeJahren += m.getJahr();
         }
         return summeJahren / medien.size();
+    }
+
+
+
+
+    public void medienListeSpeichern() {
+        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(new File("IO_Files/Medien IO Files/medien liste.ser")))) {
+            objectOutputStream.writeObject(medien);
+            System.out.println("Medien Liste wurde erfolgreich gespeichert!");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void medienListeLaden() {
+        try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("IO_Files/Medien IO Files/medien liste.ser"))) {
+            medien = (LinkedList<Medium>) objectInputStream.readObject();
+            System.out.println("Medien Liste wurde erfolgreich geladen!");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

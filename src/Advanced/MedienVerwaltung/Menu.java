@@ -2,6 +2,8 @@ package Advanced.MedienVerwaltung;
 
 import javax.swing.*;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -12,6 +14,7 @@ public class Menu {
     public Menu(MedienVerwaltungTypsicher mv) {
         this.mv = mv;
     }
+
     public MedienVerwaltungTypsicher getMv() {
         return mv;
     }
@@ -26,9 +29,12 @@ public class Menu {
                     System.out.println("\n1. Audio aufnehmen\n" +
                             "2. Bild aufnehmen\n" +
                             "3. Zeige alle Medien\n" +
-                            "4. Zeige neues Medium\n" +
-                            "5. Berechne durchschnittliches Erscheinungsjahr\n" +
-                            "6. Beenden");
+                            "4. Medienliste in Datei schreiben\n" +
+                            "5. Zeige neues Medium\n" +
+                            "6. Speichern Medien Liste\n" +
+                            "7. Laden Medien Liste\n" +
+                            "8. Berechne durchschnittliches Erscheinungsjahr\n" +
+                            "9. Beenden");
                     System.out.print("Bitte Menuepunkt waehlen: ");
                     auswahl = scanner.nextInt();
                     auswahlIsOkay = true;
@@ -48,21 +54,35 @@ public class Menu {
                     addBildJOptionPane();
                     break;
                 case 3:
-                    mv.zeigeMedium();
+                    mv.zeigeMedium(System.out);
                     break;
                 case 4:
-                    mv.sucheNeuesMedium();
+                    try {
+                        mv.zeigeMedium(new FileOutputStream("IO_Files/Medien IO Files/medien liste.txt"));
+                        System.out.println("Medien Liste wurde in datei erfolgreich gespeichert!");
+                    } catch (FileNotFoundException e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case 5:
-                    System.out.println("Durchschnittliches Erscheinungsjahr: " + mv.berechneErscheinungJahr());
+                    mv.sucheNeuesMedium();
                     break;
                 case 6:
+                    mv.medienListeSpeichern();
+                    break;
+                case 7:
+                    mv.medienListeLaden();
+                    break;
+                case 8:
+                    System.out.println("Durchschnittliches Erscheinungsjahr: " + mv.berechneErscheinungJahr());
+                    break;
+                case 9:
                     System.out.println("Danke bis zum nächsten Mal");
                     break;
                 default:
                     System.out.println("Bitte etwas gültiges auswählen");
             }
-        } while (auswahl != 6);
+        } while (auswahl != 9);
     }
 
     public void addBild() {

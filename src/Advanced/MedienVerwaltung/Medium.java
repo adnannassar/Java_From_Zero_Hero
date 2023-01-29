@@ -1,16 +1,19 @@
 package Advanced.MedienVerwaltung;
 
 
+import java.io.OutputStream;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public abstract class Medium implements Comparable<Medium> {
+public abstract class Medium implements Comparable<Medium> , Serializable {
     private int id;
     private String title;
     private int jahr;
 
     private static int counter;
 
+    private static final long serialVersionUID = 1L;
 
     public Medium(String title, int jahr) {
         this.id = counter++;
@@ -25,6 +28,7 @@ public abstract class Medium implements Comparable<Medium> {
     }
 
     public abstract void druckeDaten();
+    public abstract void druckeDaten(OutputStream stream);
 
 
     public int getId() {
