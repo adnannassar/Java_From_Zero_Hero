@@ -25,6 +25,7 @@ public class ListClass {
         System.out.println("LinkedList2: " + list2);
 
 
+
         ArrayList<Integer> arrayList = new ArrayList<>();
         arrayList.add(10);
         arrayList.add(2);
